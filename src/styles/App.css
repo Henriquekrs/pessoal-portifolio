@@ -1,40 +1,3 @@
-.mainContainer {
-  width: 100%;
-  position: relative; /* Necessário para o Locomotive Scroll */
-}
-
-.Container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border: 4px solid #1ab932;
-  width: 100%;
-  height: 40vh;
-  position: relative;
-}
-
-.Container p {
-  font-size: 1.3rem;
-  width: 20vw;
-  height: 5vh;
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: 20px 100px;
-  color: #ffffff;
-  text-align: center;
-  white-space: nowrap;
-  text-transform: uppercase;
-  border: 1px solid #ffffff;
-  overflow: hidden; /* O texto que ultrapassar os limites da tag p será ocultado */
-}
-
-.moving-text span {
-  display: inline-block;
-  animation: move-text 15s linear infinite;
-}
-
 @keyframes move-text {
   0% {
     transform: translateX(0%);
@@ -42,12 +5,4 @@
   100% {
     transform: translateX(-50%);
   }
-}
-
-.Title {
-  font-size: 4rem;
-  color: #ffffff;
-  text-align: center;
-  white-space: nowrap;
-  text-transform: uppercase;
 }

@@ -14,7 +14,8 @@
     "locomotive-scroll": "^4.1.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "styled-components": "^6.1.13"
+    "styled-components": "^6.1.13",
+    "swiper": "^11.1.14"
   },
   "devDependencies": {
     "@types/locomotive-scroll": "^4.1.3",
