@@ -7,9 +7,9 @@ import { Description } from './Description';
 const Container = styled.div`
   width: 100%;
   position: relative;
-  border: 4px solid #e05611;
   display: flex;
   flex-direction: column;
+  align-items: center;
 `;
 
 const MainCard = styled.div`
@@ -17,10 +17,9 @@ const MainCard = styled.div`
   flex-direction: column;
   align-items: flex-end;
   justify-content: center;
-  border: 4px solid #1ab932;
-  width: 100vw;
+  border-top: 1px solid #ffffffcf;
+  width: 90vw;
   height: 45vh;
-  overflow: hidden;
 `;
 
 const InternalCard = styled.p`
@@ -31,7 +30,7 @@ const InternalCard = styled.p`
   color: #ffffff;
   white-space: nowrap;
   text-transform: uppercase;
-  border: 1px solid #0dd4d1;
+  //border: 1px solid #0dd4d1;
   overflow: hidden;
 `;
 
@@ -58,10 +57,16 @@ const TitleProjects = styled.span`
 const MainTitle = styled.h1`
   font-size: 7rem;
   letter-spacing: -0.6rem;
+  cursor: pointer;
   color: #ffffff;
   text-align: center;
   white-space: nowrap;
   text-transform: uppercase;
+
+  &:hover {
+    color: #f41313;
+    transition: 0.3s ease-in-out;
+  }
 `;
 
 export function RepoList() {
@@ -81,20 +86,30 @@ export function RepoList() {
               {repo.description} {repo.description}
             </TitleInCard>
           </InternalCard>
-          <MainTitle>
+          <MainTitle
+            data-scroll
+            data-scroll-direction="horizontal"
+            data-scroll-speed={index % 2 === 0 ? 2 : -2}
+            onClick={() => window.open(repo.clone_url)}
+          >
             {repo.name} {repo.name} {repo.name}
           </MainTitle>
         </MainCard>
       ))}
       <Description />
-      {repo.slice(3, 6).map((repo) => (
+      {repo.slice(3, 6).map((repo, index) => (
         <MainCard key={repo.id}>
           <InternalCard>
             <TitleInCard>
               {repo.description} {repo.description}
             </TitleInCard>
           </InternalCard>
-          <MainTitle>
+          <MainTitle
+            data-scroll
+            data-scroll-direction="horizontal"
+            data-scroll-speed={index % 2 === 0 ? 2 : -2}
+            onClick={() => window.open(repo.clone_url)}
+          >
             {repo.name} {repo.name} {repo.name}
           </MainTitle>
         </MainCard>

@@ -21,6 +21,7 @@ const MyDescription = styled.h1`
   width: 50%;
   height: 100%;
   //border: 1px solid red;
+  font-size: 26px;
   display: flex;
   justify-content: center;
   align-items: center;

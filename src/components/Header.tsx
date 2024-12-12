@@ -93,15 +93,26 @@ const Job = styled.h1`
   color: #a9a6a6;
 `;
 
-const Contact = styled.h1`
+const Contact = styled.a`
   font-size: 1.2rem;
+  text-decoration: none;
+  font-weight: 700;
   position: absolute;
+  cursor: pointer;
   right: 20px;
   text-transform: uppercase;
-  //border: 1px solid wheat;
-  //border-radius: 20px;
   padding: 5px 10px;
   color: #a9a6a6;
+  background: linear-gradient(to top, #212121 50%, #ffffffc2 50%);
+  background-size: 100% 200%;
+  background-position: 0 100%;
+  transition: background-position 0.3s ease-in-out;
+
+  &:hover {
+    background-position: 0 0;
+    color: #000000;
+    transition: 0.3s ease-in-out;
+  }
 `;
 
 export function Header() {
@@ -118,7 +129,9 @@ export function Header() {
           <br />
           desde 2023
         </Job>
-        <Contact>Contato</Contact>
+        <Contact href="https://www.linkedin.com/in/henriquekrs/">
+          Contato
+        </Contact>
       </HeaderInformation>
       <FirstBlock>
         <H1>Full</H1>
