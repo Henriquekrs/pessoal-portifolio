@@ -7,17 +7,19 @@ import { Description } from './Description';
 const Container = styled.div`
   width: 100%;
   position: relative;
+  border: 4px solid #e05611;
+  display: flex;
+  flex-direction: column;
 `;
 
 const MainCard = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
-  //border: 4px solid #1ab932;
+  border: 4px solid #1ab932;
   width: 100vw;
   height: 45vh;
-  position: relative;
   overflow: hidden;
 `;
 
@@ -25,15 +27,11 @@ const InternalCard = styled.p`
   font-size: 1.3rem;
   width: 20vw;
   height: 5vh;
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: 20px 100px;
+  margin-right: 50px;
   color: #ffffff;
-  text-align: center;
   white-space: nowrap;
   text-transform: uppercase;
-  //border: 1px solid #ffffff;
+  border: 1px solid #0dd4d1;
   overflow: hidden;
 `;
 
