@@ -13,6 +13,7 @@ export function Home() {
     const scroll = new LocomotiveScroll({
       el: scrollRef.current, // Define o elemento monitorado
       smooth: true, // Ativa a rolagem suave
+      multiplier: 0.5, // Velocidade de rolagem
     });
 
     // Cleanup para evitar problemas ao desmontar o componente

@@ -7,6 +7,7 @@ import 'swiper/css/navigation';
 
 // import required modules
 import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
+import { useEffect, useState } from 'react';
 
 const Container = styled.div`
   width: 100vw;
@@ -45,26 +46,46 @@ const Image = styled.img`
 `;
 
 export function Description() {
-  const startYear = 2023;
-  const currentYear = new Date().getFullYear();
-  const experienceYears = currentYear - startYear;
-  let messageExperience = '';
+  const startDate = new Date('2023-04-14'); // Data de início como desenvolvedor
+  const [experienceTime, setExperienceTime] = useState('');
 
-  if (experienceYears < 2) {
-    messageExperience = `${experienceYears} ano`;
-  } else {
-    messageExperience = `${experienceYears} anos`;
-  }
+  useEffect(() => {
+    const updateExperienceTime = () => {
+      const now = new Date();
+      const diffTime = Math.abs(now.getTime() - startDate.getTime());
+      const diffYears = Math.floor(diffTime / (1000 * 60 * 60 * 24 * 365)); // Conversão para anos
+      const diffMonths = Math.floor(
+        (diffTime % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24 * 30)
+      ); // Meses restantes
+      const diffDays = Math.floor(
+        (diffTime % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24)
+      ); // Dias restantes
+      const diffHours = Math.floor(
+        (diffTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      ); // Horas restantes
+      const diffMinutes = Math.floor(
+        (diffTime % (1000 * 60 * 60)) / (1000 * 60)
+      ); // Minutos restantes
+      const diffSeconds = Math.floor((diffTime % (1000 * 60)) / 1000); // Segundos restantes
+
+      const timeString = `${diffYears} ano(s), ${diffMonths} mês(es), ${diffDays} dia(s), ${diffHours} hora(s), ${diffMinutes} minuto(s), e ${diffSeconds} segundo(s)`;
+      setExperienceTime(timeString);
+    };
+
+    const interval = setInterval(updateExperienceTime, 1000); // Atualiza a cada segundo
+
+    return () => clearInterval(interval); // Limpa o intervalo ao desmontar o componente
+  }, []);
 
   return (
     <Container>
       <MyDescription>
-        Sou desenvolvedor Full-Stack com {messageExperience} de experiência,
+        Sou desenvolvedor Full-Stack a {experienceTime} de experiência,
         localizado em Brasília. Aqui, você encontrará meus principais projetos
         em andamento. Sou entusiasta e apaixonado pela área em que atuo. Gosto
         de compartilhar conhecimento, contribuir em projetos e expandir meu
         networking. Tem algum projeto em mente? Vamos colaborar? Entre em
-        contato !
+        contato!
       </MyDescription>
       <CardImages>
         <Swiper

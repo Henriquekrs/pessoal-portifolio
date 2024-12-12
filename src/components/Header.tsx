@@ -129,8 +129,8 @@ export function Header() {
         <h1>Developer</h1>
         <Pitch>
           Sou desenvolvedor Full-Stack com mais de um ano de experiência e 40+
-          projetos, utilizando React, Node.js, Docker, MySQL e mais. Minha
-          transição de motorista de caminhão para a tecnologia trouxe
+          projetos, utilizando React, Node.js, Next.js, Docker, MySQL e mais.
+          Minha transição de motorista de caminhão para a tecnologia trouxe
           habilidades essenciais, como gerenciamento de risco e foco em prazos,
           aplicadas em soluções inovadoras e projetos colaborativos.
         </Pitch>
