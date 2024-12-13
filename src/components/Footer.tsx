@@ -23,12 +23,12 @@ const Email = styled.a`
   background: linear-gradient(to top, #212121 50%, #ffffffc2 50%);
   background-size: 100% 200%;
   background-position: 0 100%;
-  transition: background-position 0.3s ease-in-out;
+  transition: background-position 0.2s ease-in-out;
 
   &:hover {
     background-position: 0 0;
     color: #000000;
-    transition: 0.3s ease-in-out;
+    transition: 0.2s ease-in-out;
   }
 `;
 
@@ -63,7 +63,8 @@ export function Footer() {
     const interval = setInterval(updateTime, 1000); // Atualiza a cada segundo
 
     return () => clearInterval(interval); // Limpa o intervalo ao desmontar o componente
-  }, []);
+  });
+
   return (
     <>
       <Container>

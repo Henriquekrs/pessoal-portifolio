@@ -15,7 +15,6 @@ export type ProviderValue = {
 
 export const MyProvider: React.FC<MyProviderProps> = ({ children }) => {
   const [repo, setRepo] = useState<RepoType[]>([]);
-  console.log(repo);
 
   const fetchRepo = async () => {
     const result = await fetchRepos();
