@@ -1,25 +1,22 @@
 import styled from 'styled-components';
-import { Swiper, SwiperSlide } from 'swiper/react';
+//import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 // import required modules
-import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
+//import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 import { useEffect, useState } from 'react';
 
-import passwordManager from '../assets/PassWord-Manager_Image.png';
-import recipeApp from '../assets/RecipeApp_Image.png';
-import trybeFutebol from '../assets/TrybeFurtebol_Image.png';
-import trybeWallet from '../assets/TrybeWallet_Image.png';
+import fotoLinkedin from '../assets/CartoonImage.webp';
 
 const Container = styled.div`
   width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: row;
-  //border: 4px solid blue;
+  align-items: center;
 `;
 
 const MyDescription = styled.h1`
@@ -37,18 +34,23 @@ const MyDescription = styled.h1`
 
 const CardImages = styled.div`
   width: 50%;
-  height: 100%;
-  //border: 1px solid yellow;
+  height: 70%;
+  border-left: 1px solid #5f5e5e;
   display: flex;
   justify-content: center;
   align-items: center;
 `;
 
 const Image = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: auto;
+  height: 90%;
   border-radius: 20px;
+  transition: 0.5s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+    transition: 0.5s ease-in-out;
+  }
 `;
 
 export function Description() {
@@ -94,36 +96,7 @@ export function Description() {
         contato!
       </MyDescription>
       <CardImages>
-        <Swiper
-          effect={'coverflow'}
-          grabCursor={true}
-          centeredSlides={true}
-          slidesPerView={'auto'}
-          coverflowEffect={{
-            rotate: 50,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: true,
-          }}
-          pagination={{ clickable: true }}
-          navigation={true}
-          modules={[EffectCoverflow, Pagination, Navigation]}
-          style={{ width: '80%', height: '80%' }}
-        >
-          <SwiperSlide style={{ width: '500px', height: '500px' }}>
-            <Image src={trybeWallet} alt="Foto 1" />
-          </SwiperSlide>
-          <SwiperSlide style={{ width: '500px', height: '500px' }}>
-            <Image src={trybeFutebol} alt="Foto 2" />
-          </SwiperSlide>
-          <SwiperSlide style={{ width: '500px', height: '500px' }}>
-            <Image src={recipeApp} alt="Foto 3" />
-          </SwiperSlide>
-          <SwiperSlide style={{ width: '500px', height: '500px' }}>
-            <Image src={passwordManager} alt="Foto 4" />
-          </SwiperSlide>
-        </Swiper>
+        <Image src={fotoLinkedin} alt="foto de perfil" />
       </CardImages>
     </Container>
   );
