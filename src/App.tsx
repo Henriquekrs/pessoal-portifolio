@@ -5,9 +5,11 @@ import 'locomotive-scroll/dist/locomotive-scroll.css'; // Importa o CSS da bibli
 import { useEffect, useRef } from 'react';
 
 function App() {
-  const scrollRef = useRef(null); // Referência para o contêiner de rolagem
+  const scrollRef = useRef<HTMLDivElement | null>(null); // Referência para o contêiner de rolagem
 
   useEffect(() => {
+    if (!scrollRef.current) return;
+
     const scroll = new LocomotiveScroll({
       el: scrollRef.current, // Define o elemento monitorado
       smooth: true, // Ativa a rolagem suave

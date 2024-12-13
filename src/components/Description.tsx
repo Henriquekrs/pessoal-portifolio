@@ -9,6 +9,11 @@ import 'swiper/css/navigation';
 import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 import { useEffect, useState } from 'react';
 
+import passwordManager from '../assets/PassWord-Manager_Image.png';
+import recipeApp from '../assets/RecipeApp_Image.png';
+import trybeFutebol from '../assets/TrybeFurtebol_Image.png';
+import trybeWallet from '../assets/TrybeWallet_Image.png';
+
 const Container = styled.div`
   width: 100vw;
   height: 100vh;
@@ -107,16 +112,16 @@ export function Description() {
           style={{ width: '80%', height: '80%' }}
         >
           <SwiperSlide style={{ width: '500px', height: '500px' }}>
-            <Image src="src/assets/TrybeWallet_Image.png" alt="Foto 1" />
+            <Image src={trybeWallet} alt="Foto 1" />
           </SwiperSlide>
           <SwiperSlide style={{ width: '500px', height: '500px' }}>
-            <Image src="src/assets/TrybeFurtebol_Image.png" alt="Foto 2" />
+            <Image src={trybeFutebol} alt="Foto 2" />
           </SwiperSlide>
           <SwiperSlide style={{ width: '500px', height: '500px' }}>
-            <Image src="src/assets/RecipeApp_Image.png" alt="Foto 3" />
+            <Image src={recipeApp} alt="Foto 3" />
           </SwiperSlide>
           <SwiperSlide style={{ width: '500px', height: '500px' }}>
-            <Image src="src/assets/PassWord-Manager_Image.png" alt="Foto 4" />
+            <Image src={passwordManager} alt="Foto 4" />
           </SwiperSlide>
         </Swiper>
       </CardImages>
