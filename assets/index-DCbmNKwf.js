@@ -266,7 +266,7 @@ Error generating stack: `+o.message+`
   @media (max-width: 768px) {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     //border: 1px solid #001aff;
     width: 98vw;
     height: auto;
@@ -281,7 +281,8 @@ Error generating stack: `+o.message+`
 
   @media (max-width: 768px) {
     font-size: 1rem;
-    width: 30%;
+    width: 23%;
+    height: auto;
   }
 `,r0=G.h1`
   font-size: 1.2rem;
@@ -290,7 +291,10 @@ Error generating stack: `+o.message+`
 
   @media (max-width: 768px) {
     font-size: 1rem;
-    width: 30%;
+    width: 43%;
+    right: 10px;
+    position: relative;
+    left: 20px;
   }
 `,i0=G.a`
   font-size: 1.2rem;
@@ -322,7 +326,7 @@ Error generating stack: `+o.message+`
     text-decoration: none;
     font-weight: 700;
     font-size: 1rem;
-    width: 30%;
+    width: 23%;
 
     &:hover {
       color: #ff0000;
