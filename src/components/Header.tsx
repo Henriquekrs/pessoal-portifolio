@@ -108,7 +108,7 @@ const HeaderInformation = styled.div`
   @media (max-width: 768px) {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     //border: 1px solid #001aff;
     width: 98vw;
     height: auto;
@@ -125,7 +125,8 @@ const MyName = styled.h1`
 
   @media (max-width: 768px) {
     font-size: 1rem;
-    width: 30%;
+    width: 23%;
+    height: auto;
   }
 `;
 
@@ -136,7 +137,10 @@ const Job = styled.h1`
 
   @media (max-width: 768px) {
     font-size: 1rem;
-    width: 30%;
+    width: 43%;
+    right: 10px;
+    position: relative;
+    left: 20px;
   }
 `;
 
@@ -170,7 +174,7 @@ const Contact = styled.a`
     text-decoration: none;
     font-weight: 700;
     font-size: 1rem;
-    width: 30%;
+    width: 23%;
 
     &:hover {
       color: #ff0000;
