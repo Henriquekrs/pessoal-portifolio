@@ -12,7 +12,7 @@ const BlockTitle = styled.div`
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 125vh;
     padding: 0;
   }
 `;
@@ -29,7 +29,6 @@ const FirstBlock = styled.div`
     position: relative;
     width: 95%;
     height: auto;
-    top: 5vh;
   }
 `;
 
@@ -42,8 +41,8 @@ const H1 = styled.h1`
   position: relative;
 
   @media (max-width: 768px) {
-    letter-spacing: -10px;
-    font-size: 5rem;
+    letter-spacing: -9px;
+    font-size: 20vw;
   }
 `;
 
@@ -65,15 +64,16 @@ const SecondBlock = styled.div`
 
   @media (max-width: 768px) {
     display: flex;
+    position: relative;
+    top: -40px;
     width: 95%;
     height: auto;
     align-items: start;
-    //border: 1px solid #001aff;
     flex-direction: column;
 
     & h1 {
       letter-spacing: -10px;
-      font-size: 5rem;
+      font-size: 20vw;
     }
   }
 `;
@@ -91,9 +91,9 @@ const Pitch = styled.p`
     display: flex;
     width: 90%;
     text-align: left;
-    font-size: 25px;
+    font-size: 23px;
     position: relative;
-    top: 2vh;
+    top: 5vh;
   }
 `;
 

@@ -21,8 +21,9 @@ const Container = styled.div`
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
-    border: 1px solid #5f5e5e;
-    height: 100vh;
+    //border: 1px solid #5f5e5e;
+    width: 100vw;
+    height: auto;
     padding: 0;
   }
 `;
@@ -42,7 +43,7 @@ const MyDescription = styled.h1`
   @media (max-width: 768px) {
     width: 90%;
     height: 50%;
-    font-size: 20px;
+    font-size: 18px;
     padding: 3vh;
   }
 `;
@@ -56,8 +57,8 @@ const CardImages = styled.div`
   align-items: center;
 
   @media (max-width: 768px) {
-    width: 90%;
-    height: 50%;
+    width: 50vw;
+    height: 60vh;
     border-left: none;
     border-top: 1px solid #5f5e5e;
   }
@@ -76,6 +77,8 @@ const Image = styled.img`
 
   @media (max-width: 768px) {
     border-radius: 0px;
+    width: 100vw;
+    height: auto;
   }
 `;
 

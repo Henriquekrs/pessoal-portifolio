@@ -61,6 +61,11 @@ const TitleProjects = styled.span`
   white-space: nowrap;
   text-transform: uppercase;
   //border: 1px solid #ffffff;
+
+  @media (max-width: 768px) {
+    width: 80vw;
+    margin: 20px 0;
+  }
 `;
 
 const MainTitle = styled.h1`
