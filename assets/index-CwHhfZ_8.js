@@ -48,8 +48,9 @@ Error generating stack: `+o.message+`
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
-    border: 1px solid #5f5e5e;
-    height: 100vh;
+    //border: 1px solid #5f5e5e;
+    width: 100vw;
+    height: auto;
     padding: 0;
   }
 `,bv=G.h1`
@@ -67,7 +68,7 @@ Error generating stack: `+o.message+`
   @media (max-width: 768px) {
     width: 90%;
     height: 50%;
-    font-size: 20px;
+    font-size: 18px;
     padding: 3vh;
   }
 `,Wv=G.div`
@@ -79,8 +80,8 @@ Error generating stack: `+o.message+`
   align-items: center;
 
   @media (max-width: 768px) {
-    width: 90%;
-    height: 50%;
+    width: 50vw;
+    height: 60vh;
     border-left: none;
     border-top: 1px solid #5f5e5e;
   }
@@ -97,6 +98,8 @@ Error generating stack: `+o.message+`
 
   @media (max-width: 768px) {
     border-radius: 0px;
+    width: 100vw;
+    height: auto;
   }
 `;function Yv(){const e=new Date("2023-04-14"),[t,n]=we.useState("");return we.useEffect(()=>{const i=setInterval(()=>{const s=Math.abs(new Date().getTime()-e.getTime()),l=Math.floor(s/(1e3*60*60*24*365)),a=Math.floor(s%(1e3*60*60*24*365)/(1e3*60*60*24*30)),u=Math.floor(s%(1e3*60*60*24*30)/(1e3*60*60*24)),f=Math.floor(s%(1e3*60*60*24)/(1e3*60*60)),c=Math.floor(s%(1e3*60*60)/(1e3*60)),h=Math.floor(s%(1e3*60)/1e3),v=`${l} ano(s), ${a} mês(es), ${u} dia(s), ${f} hora(s), ${c} minuto(s), e ${h} segundo(s)`;n(v)},1e3);return()=>clearInterval(i)},[]),D.jsxs(Hv,{children:[D.jsxs(bv,{children:["Sou desenvolvedor Full-Stack a ",t," de experiência, localizado em Brasília. Aqui, você encontrará meus principais projetos em andamento. Sou entusiasta e apaixonado pela área em que atuo. Gosto de compartilhar conhecimento, contribuir em projetos e expandir meu networking. Tem algum projeto em mente? Vamos colaborar? Entre em contato!"]}),D.jsx(Wv,{children:D.jsx(Vv,{src:Uv,alt:"foto de perfil"})})]})}const Kv=G.div`
   width: 100%;
@@ -147,6 +150,11 @@ Error generating stack: `+o.message+`
   white-space: nowrap;
   text-transform: uppercase;
   //border: 1px solid #ffffff;
+
+  @media (max-width: 768px) {
+    width: 80vw;
+    margin: 20px 0;
+  }
 `,Pc=G.h1`
   font-size: 7rem;
   letter-spacing: -0.6rem;
@@ -172,7 +180,7 @@ Error generating stack: `+o.message+`
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 125vh;
     padding: 0;
   }
 `,Gv=G.div`
@@ -187,7 +195,6 @@ Error generating stack: `+o.message+`
     position: relative;
     width: 95%;
     height: auto;
-    top: 5vh;
   }
 `,Jv=G.h1`
   font-size: 17rem;
@@ -198,8 +205,8 @@ Error generating stack: `+o.message+`
   position: relative;
 
   @media (max-width: 768px) {
-    letter-spacing: -10px;
-    font-size: 5rem;
+    letter-spacing: -9px;
+    font-size: 20vw;
   }
 `,Zv=G.div`
   display: flex;
@@ -219,15 +226,16 @@ Error generating stack: `+o.message+`
 
   @media (max-width: 768px) {
     display: flex;
+    position: relative;
+    top: -40px;
     width: 95%;
     height: auto;
     align-items: start;
-    //border: 1px solid #001aff;
     flex-direction: column;
 
     & h1 {
       letter-spacing: -10px;
-      font-size: 5rem;
+      font-size: 20vw;
     }
   }
 `,e0=G.p`
@@ -243,9 +251,9 @@ Error generating stack: `+o.message+`
     display: flex;
     width: 90%;
     text-align: left;
-    font-size: 25px;
+    font-size: 23px;
     position: relative;
-    top: 2vh;
+    top: 5vh;
   }
 `,t0=G.div`
   display: flex;
