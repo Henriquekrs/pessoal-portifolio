@@ -8,33 +8,43 @@ const BlockTitle = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 0;
+  }
 `;
 
 const FirstBlock = styled.div`
   display: flex;
   height: 40%;
   width: 95%;
-  //border: 1px solid red;
+  //border: 1px solid #70f708;
   align-items: center;
   justify-content: flex-start;
+
+  @media (max-width: 768px) {
+    position: relative;
+    width: 95%;
+    height: auto;
+    top: 5vh;
+  }
 `;
 
 const H1 = styled.h1`
   font-size: 17rem;
-  width: 37vw;
   font-weight: 700;
   color: #a9a6a6;
   text-transform: uppercase;
-  letter-spacing: -2rem;
+  letter-spacing: -36px;
   position: relative;
-`;
 
-const H2 = styled.h1`
-  font-size: 17rem;
-  font-weight: 700;
-  color: #a9a6a6;
-  text-transform: uppercase;
-  letter-spacing: -1.9rem;
+  @media (max-width: 768px) {
+    letter-spacing: -10px;
+    font-size: 5rem;
+  }
 `;
 
 const SecondBlock = styled.div`
@@ -52,6 +62,20 @@ const SecondBlock = styled.div`
     text-transform: uppercase;
     letter-spacing: -1.9rem;
   }
+
+  @media (max-width: 768px) {
+    display: flex;
+    width: 95%;
+    height: auto;
+    align-items: start;
+    //border: 1px solid #001aff;
+    flex-direction: column;
+
+    & h1 {
+      letter-spacing: -10px;
+      font-size: 5rem;
+    }
+  }
 `;
 
 const Pitch = styled.p`
@@ -62,15 +86,15 @@ const Pitch = styled.p`
   color: #a9a6a6;
   text-align: justify;
   font-size: 1rem;
-`;
 
-const Hyphen = styled.div`
-  width: 120px;
-  //border: 5px solid #f9f9f9;
-  height: 25px;
-  justify-self: center;
-  background-color: #a9a6a6;
-  margin-right: 14px;
+  @media (max-width: 768px) {
+    display: flex;
+    width: 90%;
+    text-align: left;
+    font-size: 25px;
+    position: relative;
+    top: 2vh;
+  }
 `;
 
 const HeaderInformation = styled.div`
@@ -79,18 +103,41 @@ const HeaderInformation = styled.div`
   width: 95%;
   height: 10%;
   gap: 13vw;
+  //border: 1px solid red;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    //border: 1px solid #001aff;
+    width: 98vw;
+    height: auto;
+    position: absolute;
+    top: 20px;
+    gap: 0;
+  }
 `;
 
 const MyName = styled.h1`
   font-size: 1.2rem;
   text-transform: uppercase;
   color: #a9a6a6;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    width: 30%;
+  }
 `;
 
 const Job = styled.h1`
   font-size: 1.2rem;
   text-transform: uppercase;
   color: #a9a6a6;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    width: 30%;
+  }
 `;
 
 const Contact = styled.a`
@@ -113,6 +160,22 @@ const Contact = styled.a`
     color: #000000;
     transition: 0.3s ease-in-out;
   }
+
+  @media (max-width: 768px) {
+    padding: 0;
+    right: 0;
+    text-align: center;
+    background: none;
+    position: relative;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    width: 30%;
+
+    &:hover {
+      color: #ff0000;
+    }
+  }
 `;
 
 export function Header() {
@@ -134,9 +197,7 @@ export function Header() {
         </Contact>
       </HeaderInformation>
       <FirstBlock>
-        <H1>Full</H1>
-        <Hyphen />
-        <H2>Stack</H2>
+        <H1>Full-Stack</H1>
       </FirstBlock>
       <SecondBlock>
         <h1>Developer</h1>

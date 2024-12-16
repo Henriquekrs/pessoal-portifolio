@@ -30,6 +30,19 @@ const Email = styled.a`
     color: #000000;
     transition: 0.2s ease-in-out;
   }
+
+  @media (max-width: 768px) {
+    width: 90%;
+    height: auto;
+    font-size: 20px;
+    padding: 3vh;
+
+    &:hover {
+      background-position: 0 0;
+      color: #000000;
+      transition: 0.2s ease-in-out;
+    }
+  }
 `;
 
 const ContainerFooter = styled.footer`
@@ -41,6 +54,15 @@ const ContainerFooter = styled.footer`
   //border: 4px solid pink;
   justify-content: space-around;
   color: #a9a6a6;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    width: 100vw;
+    padding: 0;
+    text-align: center;
+  }
 `;
 
 export function Footer() {

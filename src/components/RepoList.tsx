@@ -32,11 +32,20 @@ const InternalCard = styled.p`
   text-transform: uppercase;
   //border: 1px solid #0dd4d1;
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    width: 50vw;
+    margin-right: 0;
+  }
 `;
 
 const TitleInCard = styled.span`
   display: inline-block;
   animation: move-text 15s linear infinite;
+
+  @media (max-width: 768px) {
+    animation: move-text 55s linear infinite;
+  }
 `;
 
 const TitleProjects = styled.span`
@@ -92,7 +101,7 @@ export function RepoList() {
             data-scroll-speed={index % 2 === 0 ? 2 : -2}
             onClick={() => window.open(repo.clone_url)}
           >
-            {repo.name} {repo.name} {repo.name}
+            {repo.name} {repo.name} {repo.name} {repo.name}
           </MainTitle>
         </MainCard>
       ))}
@@ -110,7 +119,7 @@ export function RepoList() {
             data-scroll-speed={index % 2 === 0 ? 2 : -2}
             onClick={() => window.open(repo.clone_url)}
           >
-            {repo.name} {repo.name} {repo.name}
+            {repo.name} {repo.name} {repo.name} {repo.name}
           </MainTitle>
         </MainCard>
       ))}

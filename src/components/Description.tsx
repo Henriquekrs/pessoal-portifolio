@@ -17,6 +17,14 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #5f5e5e;
+    height: 100vh;
+    padding: 0;
+  }
 `;
 
 const MyDescription = styled.h1`
@@ -30,6 +38,13 @@ const MyDescription = styled.h1`
   color: #a9a6a6;
   font-weight: 300;
   padding: 0px 30px 0px 30px;
+
+  @media (max-width: 768px) {
+    width: 90%;
+    height: 50%;
+    font-size: 20px;
+    padding: 3vh;
+  }
 `;
 
 const CardImages = styled.div`
@@ -39,6 +54,13 @@ const CardImages = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 768px) {
+    width: 90%;
+    height: 50%;
+    border-left: none;
+    border-top: 1px solid #5f5e5e;
+  }
 `;
 
 const Image = styled.img`
@@ -50,6 +72,10 @@ const Image = styled.img`
   &:hover {
     transform: scale(1.1);
     transition: 0.5s ease-in-out;
+  }
+
+  @media (max-width: 768px) {
+    border-radius: 0px;
   }
 `;
 
