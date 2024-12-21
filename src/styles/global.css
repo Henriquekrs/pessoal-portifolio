@@ -3,6 +3,20 @@
   padding: 0;
 }
 
+html,
+body {
+  overflow: hidden;
+}
+
+#main-container {
+  overflow: hidden;
+}
+
+[data-scroll-container] {
+  overflow: hidden;
+  min-height: 100vh;
+}
+
 body {
   font-family: "JetBrains Mono", monospace;
   background-color: #212121;

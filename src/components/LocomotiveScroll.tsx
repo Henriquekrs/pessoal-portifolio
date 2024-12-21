@@ -6,7 +6,7 @@ type SmoothScrollProps = {
 };
 
 const SmoothScroll: React.FC<SmoothScrollProps> = ({ children }) => {
-  const scrollRef = useRef<HTMLDivElement>(null);
+  const scrollRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     if (scrollRef.current) {
@@ -16,6 +16,10 @@ const SmoothScroll: React.FC<SmoothScrollProps> = ({ children }) => {
         multiplier: 0.5,
         smartphone: { smooth: true },
       });
+
+      setTimeout(() => {
+        scroll.update();
+      }, 500);
 
       return () => {
         scroll.destroy();
