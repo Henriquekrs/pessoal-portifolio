@@ -1,31 +1,14 @@
 import { Home } from './pages/Home';
-import LocomotiveScroll from 'locomotive-scroll';
-
-import 'locomotive-scroll/dist/locomotive-scroll.css'; // Importa o CSS da biblioteca
-import { useEffect, useRef } from 'react';
+import 'locomotive-scroll/dist/locomotive-scroll.css';
+import SmoothScroll from './components/LocomotiveScroll';
 
 function App() {
-  const scrollRef = useRef<HTMLDivElement | null>(null); // Referência para o contêiner de rolagem
-
-  useEffect(() => {
-    if (!scrollRef.current) return;
-
-    const scroll = new LocomotiveScroll({
-      el: scrollRef.current, // Define o elemento monitorado
-      smooth: true, // Ativa a rolagem suave
-      multiplier: 0.5, // Velocidade de rolagem
-    });
-
-    // Cleanup para evitar problemas ao desmontar o componente
-    return () => {
-      if (scroll) scroll.destroy();
-    };
-  });
-
   return (
-    <div data-scroll-container ref={scrollRef}>
-      <Home />
-    </div>
+    <SmoothScroll>
+      <div data-scroll-section>
+        <Home />
+      </div>
+    </SmoothScroll>
   );
 }
 

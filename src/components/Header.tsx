@@ -182,6 +182,31 @@ const Contact = styled.a`
   }
 `;
 
+const ImageScroll = styled.img`
+  position: absolute;
+  top: 90vh;
+  width: 70px;
+  animation: bounce-out-down 2s ease infinite;
+
+  @keyframes bounce-out-down {
+    0% {
+      transform: translateY(0);
+    }
+    20% {
+      opacity: 1;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
 export function Header() {
   return (
     <BlockTitle>
@@ -213,6 +238,10 @@ export function Header() {
           aplicadas em soluções inovadoras e projetos colaborativos.
         </Pitch>
       </SecondBlock>
+      <ImageScroll
+        src="https://www.sripanwa.com/images/scroll_icon.png"
+        alt="icon scroll down"
+      />
     </BlockTitle>
   );
 }

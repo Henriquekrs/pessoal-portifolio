@@ -8,7 +8,8 @@ export async function fetchRepos() {
   for (let i = 0; i < data.length; i++) {
     if (
       data[i].name === 'Henriquekrs' ||
-      data[i].name === 'pessoal-portifolio'
+      data[i].name === 'pessoal-portifolio' ||
+      data[i].name === 'Test_Tec_Be_Backand'
     ) {
       data.splice(i, 1);
     }
